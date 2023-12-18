@@ -1,0 +1,13 @@
+trigger:
+- main  # Replace 'main' with your branch name
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+- job: ExecuteScript
+  steps:
+  - checkout: self
+
+  - script: ./hello_script.sh
+
